@@ -15,7 +15,7 @@
         
         <div class="mt-4, mb-4">
             
-            <a href="http://localhost/semilleroNex/MVC/controllers/CarrerasController.php" class="btn btn-secondary">Gestión de Carreras</a>
+            <a href="http://localhost/Proyecto-Semillero_Nex/controllers/CarrerasController.php" class="btn btn-secondary">Gestión de Carreras</a>
         </div>
     
 
@@ -81,8 +81,8 @@
                     </td>
                     <td> <?php echo($user->celular) ?></td>
                     <td>
-                        <a href="http://localhost/semilleroNex/MVC/controllers/UsersController.php?_method%20=PUT&userId=<?php echo($user->id)?>" class="btn btn-warning btn-sm edit-user" data-id="1">Editar</a>
-                        <a href="http://localhost/semilleroNex/MVC/controllers/UsersController.php?_method%20=PUT&deleteId=<?php echo($user->id)?>" class="btn btn-danger btn-sm delete-user">Eliminar</a>
+                        <a href="http://localhost/Proyecto-Semillero_Nex/controllers/UsersController.php?_method%20=PUT&userId=<?php echo($user->id)?>" class="btn btn-warning btn-sm edit-user" data-id="1">Editar</a>
+                        <a href="http://localhost/Proyecto-Semillero_Nex/controllers/UsersController.php?_method%20=PUT&deleteId=<?php echo($user->id)?>" class="btn btn-danger btn-sm delete-user">Eliminar</a>
                     </td>
                 </tr>
                 <?php endforeach ?>
@@ -95,12 +95,12 @@
         <nav aria-label="Page navigation example">
             <ul class="pagination">
                 <li class="page-item">
-                    <a class="page-link" href="http://localhost/semilleroNex/MVC/controllers/UsersController.php?page=<?php echo(($results->currentPage - 1 == 0) ? 1 : $results->currentPage -1)?>" aria-label="Previous">
+                    <a class="page-link" href="http://localhost/Proyecto-Semillero_Nex/controllers/UsersController.php?page=<?php echo(($results->currentPage - 1 == 0) ? 1 : $results->currentPage -1)?>" aria-label="Previous">
                         <span aria-hidden="true">&laquo;</span>
                     </a>
                 </li>
                 <?php $count = 0 ?>
-                <li class="page-item"><a class="page-link" href="http://localhost/semilleroNex/MVC/controllers/UsersController.php?page=<?php echo($results->currentPage)?>"><?php echo($results->currentPage)?></a></li>
+                <li class="page-item"><a class="page-link" href="http://localhost/Proyecto-Semillero_Nex/controllers/UsersController.php?page=<?php echo($results->currentPage)?>"><?php echo($results->currentPage)?></a></li>
                 <?php for ($i=$results->currentPage; $i <= $results->totalPages; $i++): ?> 
                     <?php 
                         if ($i == $results->currentPage) {
@@ -110,11 +110,11 @@
                             break;
                         }
                     ?>
-                    <li class="page-item"><a class="page-link" href="http://localhost/semilleroNex/MVC/controllers/UsersController.php?page=<?php echo($i)?>"><?php echo($i)?></a></li>
+                    <li class="page-item"><a class="page-link" href="http://localhost/Proyecto-Semillero_Nex/controllers/UsersController.php?page=<?php echo($i)?>"><?php echo($i)?></a></li>
                     <?php $count++ ?>
                 <?php endfor ?>
                 <li class="page-item">
-                    <a class="page-link" href="http://localhost/semilleroNex/MVC/controllers/UsersController.php?page=<?php echo(($results->currentPage + 1 < $results->totalPages) ?  $results->currentPage + 1 : $results->totalPages)?>" aria-label="Next">
+                    <a class="page-link" href="http://localhost/Proyecto-Semillero_Nex/controllers/UsersController.php?page=<?php echo(($results->currentPage + 1 < $results->totalPages) ?  $results->currentPage + 1 : $results->totalPages)?>" aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
                     </a>
                 </li>

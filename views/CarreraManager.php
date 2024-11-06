@@ -52,7 +52,7 @@
 
         <div class="mt-4, mb-4">
             
-            <a href="http://localhost/semilleroNex/MVC/controllers/UsersController.php" class="btn btn-secondary">Lista de Usuarios</a>
+            <a href="http://localhost/Proyecto-Semillero_Nex/controllers/UsersController.php" class="btn btn-secondary">Lista de Usuarios</a>
         </div>
     </div>
 

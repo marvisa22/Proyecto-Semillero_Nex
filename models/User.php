@@ -40,9 +40,9 @@ class User {
                         ':password' => password_hash($this->password, PASSWORD_BCRYPT, ['cost' => 12]),
                     ]
                 );
-            header('Location: http://localhost/semilleroNex/MVC/controllers/usersController.php?message=Usuario registrado con éxito&success=1');
+            header('Location: http://localhost/Proyecto-Semillero_Nex/controllers/usersController.php?message=Usuario registrado con éxito&success=1');
         } catch(PDOException $ex) {
-            header('Location: http://localhost/semilleroNex/MVC/controllers/usersController.php?message=' . $ex->getMessage() . '&success=0');
+            header('Location: http://localhost/Proyecto-Semillero_Nex/controllers/usersController.php?message=' . $ex->getMessage() . '&success=0');
         } finally {
             $this->closeConnection();
         }
@@ -64,9 +64,9 @@ class User {
                         ':id' => $this->id,
                     ]
                 );
-            header('Location: http://localhost/semilleroNex/MVC/controllers/usersController.php?message=Usuario actualizado con éxito&success=1');
+            header('Location: http://localhost/Proyecto-Semillero_Nex/controllers/usersController.php?message=Usuario actualizado con éxito&success=1');
         } catch(PDOException $ex) {
-            header('Location: http://localhost/semilleroNex/MVC/controllers/usersController.php?message=' . $ex->getMessage() . '&success=0');
+            header('Location: http://localhost/Proyecto-Semillero_Nex/controllers/usersController.php?message=' . $ex->getMessage() . '&success=0');
         } finally {
             $this->closeConnection();
         }
@@ -85,12 +85,12 @@ class User {
                 );
                 
                 if ($statement->rowCount()) {
-                    header('Location: http://localhost/semilleroNex/MVC/controllers/usersController.php?message=Usuario eliminado con éxito&success=1');
+                    header('Location: http://localhost/Proyecto-Semillero_Nex/controllers/usersController.php?message=Usuario eliminado con éxito&success=1');
                     return;
                 }
-                header('Location: http://localhost/semilleroNex/MVC/controllers/usersController.php?message=Usuario no encontrado&success=1');
+                header('Location: http://localhost/Proyecto-Semillero_Nex/controllers/usersController.php?message=Usuario no encontrado&success=1');
         } catch(PDOException $ex) {
-            header('Location: http://localhost/semilleroNex/MVC/controllers/usersController.php?message=' . $ex->getMessage() . '&success=0');
+            header('Location: http://localhost/Proyecto-Semillero_Nex/controllers/usersController.php?message=' . $ex->getMessage() . '&success=0');
         } finally {
             $this->closeConnection();
         }

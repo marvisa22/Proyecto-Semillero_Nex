@@ -10,7 +10,7 @@
 
     <div class="container mt-5">
         <h1 class="mb-4 text-center"><?php echo isset($carreraData) ? 'Editar' : 'Crear'; ?> Carrera</h1>
-        <form action="./CarrerasController.php" method="POST">
+        <form action="../controllers/CarrerasController.php" method="POST">
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre de la Carrera</label>
                 <input type="text" name="nombre" id="nombre" class="form-control" value="<?php echo isset($carreraData) ? $carreraData->nombre : ''; ?>" required>
@@ -22,7 +22,7 @@
         </form>
         
         <div class="mt-10, mb-3">
-            <a href="http://localhost/semilleroNex/MVC/controllers/CarrerasController.php" class="btn btn-secondary">Gestión de Carreras</a>
+            <a href="http://localhost/Proyecto-Semillero_Nex/controllers/CarrerasController.php" class="btn btn-secondary">Gestión de Carreras</a>
         </div>
 
     </div>
