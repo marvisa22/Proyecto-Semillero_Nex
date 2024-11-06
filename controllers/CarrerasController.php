@@ -35,7 +35,6 @@ class CarrerasController {
     public function delete($id) {
         $carrera = new Carrera();
         $carrera->delete($id);
-        header('Location: ./CarrerasController.php');
     }
 
     public function viewUsersByCareer($carreraId, $page = 1) {

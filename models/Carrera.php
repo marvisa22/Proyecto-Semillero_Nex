@@ -81,6 +81,7 @@ class Carrera {
             if ($statement->rowCount()) {
                 header('Location: http://localhost/Proyecto-Semillero_Nex/controllers/carrerasController.php?message=Carrera eliminado con éxito&success=1');
                 return;
+                
             }
             header('Location: http://localhost/Proyecto-Semillero_Nex/controllers/carrerasController.php?message=Carrera no encontrado&success=1');
         } catch (PDOException $e) {
